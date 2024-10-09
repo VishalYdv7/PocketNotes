@@ -1,0 +1,188 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+    background-color: #DAE5F5;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 25%;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    position: relative;  /* So that the button stays relative to the sidebar */
+}
+
+.group-item {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.group-item.active {
+    background-color: #0066ff;
+    color: white;
+}
+
+/* Floating add button styles */
+.add-group-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0066ff;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-group-button:hover {
+    background-color: #0051cc;
+}  
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.notes-list {
+    flex-grow: 1;
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.note-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.no-notes {
+    padding: 10px;
+    color:#DAE5F5;
+}
+
+.note-editor {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-editor textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.note-editor button {
+    padding: 10px;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Popup Styles */
+.Popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.Popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.Popup-content h2 {
+    margin-bottom: 20px;
+}
+
+.Popup-content input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-box.selected {
+    border: 2px solid #000000;
+}
+
+.Popup-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Popup-actions button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.Popup-actions button:first-child {
+    background-color: #0066ff;
+    color: white;
+}
+
+.Popup-actions button:last-child {
+    background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+    flex-direction: column;
+    }
+
+    .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    }
+
+    .main-content {
+    flex-grow: 1;
+    display: none;
+    }
+
+    .sidebar .group-item.active + .main-content {
+    display: flex;
+    }
+}

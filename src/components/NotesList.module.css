@@ -1,0 +1,95 @@
+.notesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 90px);
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.notesList {
+    flex: 1;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin: 20px;
+}
+
+.noteItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    margin: 8px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.noteText {
+    font-size: 16px;
+    color: #000000;
+    line-height: 2;
+}
+
+.noteTimestamp {
+    display: flex;
+    justify-content: right;
+    color: #353535;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.noteInputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding: 10px; /* Optional: Add some padding */
+    background-color: #001F8B; /* Optional: Set a background color */
+    border-top: 1px solid #CCCCCC; /* Optional: Add a border at the top */
+    position: sticky;
+    bottom: 0;
+}
+
+.inputAndSend{
+    width: 95%;
+    background-color: #FFFFFF;
+    margin: 10px;
+}
+
+.noteInput {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    font-size: 24px;
+    color: #9A9A9A;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    resize: none;
+}
+
+.inactiveSendIcon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.activeSendIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.activeSendIcon:hover {
+    opacity: 0.8;
+}
+
+.activeSendIcon:active {
+    opacity: 1;
+}

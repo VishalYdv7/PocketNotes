@@ -48,7 +48,6 @@
     border: 2px solid #CCCCCC;
     color: #979797;
     border-radius: 20px;
-    font-size: 16px;
     margin-left: 30px;
     font-size: 20px;
 }
@@ -97,3 +96,37 @@
     transition: background-color 0.3s ease;
 }
 
+@media (max-width: 768px){
+    h2{
+        font-size: 20px;
+    }
+
+    .groupName{
+        font-size: 14px;
+    }
+
+    .input{
+        font-size: 14px;
+        padding-left: 5px;
+        margin: 8px;
+    }
+
+    .colorRow{
+        font-size: 14px;
+    }
+
+    .colorOptions{
+        margin-left: 5px;
+    }
+
+    .colorBox{
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+
+    .createButton{
+        font-size: 14px;
+        padding: 5px;
+    }
+}

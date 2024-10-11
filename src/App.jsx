@@ -79,18 +79,21 @@ const App = () => {
 		return words.slice(0, 2).map(word => word.charAt(0).toUpperCase()).join(''); // First two letters of the first two words
 	};
 
+	const handleBackClick = () => {
+		setActiveGroup(null); // Reset the active group to show the sidebar
+	};
+
 	return (
 		<div className="app-container">
 			{/* Sidebar for listing groups */}
 			<Sidebar
-				className="sidebar"
+				className='sidebar'
 				groups={groups}
 				handleGroupClick={handleGroupClick}
 				activeGroup={activeGroup}
 				onAddGroup={() => setShowPopup(true)} // Show popup when adding a new group
 			/>
-			
-			<div className="main-content">
+			<div className={`main-content ${activeGroup ? 'group-active' : 'no-active-group'}`}>
 				{activeGroup === null || (groups.length === 0) ? (  // Check if there is no active group or if there are no groups
 					// If there are no active groups, render the SVG image with text
 					<div className="no-groups">
@@ -111,6 +114,7 @@ const App = () => {
 					// If there are active groups, render the NotesList
 					<div className='notes-container' >
 						<div className="notes-header">
+						<button className="back-button" onClick={handleBackClick}>&larr;</button>
 							<div 
 								className="profile-photo"
 								style={{ backgroundColor: activeGroup.color }}

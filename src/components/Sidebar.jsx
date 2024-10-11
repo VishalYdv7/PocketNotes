@@ -10,7 +10,7 @@ const getInitials = (name) => {
 };
 const Sidebar = ({ groups, handleGroupClick, activeGroup, onAddGroup }) => {
     return (
-        <div className={styles.sidebar}>
+        <div className={`${styles.sidebar} ${activeGroup ? styles['group-active'] : styles['no-active-group']}`}>
             <div className={styles.sidebarTitle}>
                 Pocket Notes
             </div>

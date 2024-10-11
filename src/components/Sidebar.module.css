@@ -4,8 +4,7 @@
     width: 100%;
     height: calc(100vh - 20px);
     overflow: auto;
-    background-color: #FFFFFF; /* Adjust background color as needed */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for sidebar */
+    background-color: #FFFFFF;
 }
 
 .sidebarTitle {
@@ -75,3 +74,16 @@
     color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+    .group-active {
+        display: none;
+        /* Additional styles when a group is active */
+    }
+    
+    /* Styles when no active group is present */
+    .no-active-group {
+        display: flex;
+        flex-direction: column;
+        /* Additional styles when no group is active */
+    }
+}

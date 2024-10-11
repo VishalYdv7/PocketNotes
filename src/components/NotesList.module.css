@@ -93,3 +93,20 @@
 .activeSendIcon:active {
     opacity: 1;
 }
+
+
+@media (max-width: 768px){
+    .noteText {
+        font-size: 12px;
+    }
+
+    .noteInput {
+        font-size: 12px;
+        height: 100px;
+        width: 80%;
+    }
+
+    .noteTimestamp {
+        font-size: 12px;
+    }
+}

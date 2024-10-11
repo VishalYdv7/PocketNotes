@@ -77,3 +77,60 @@
     height: auto;
     margin-right: 10px;
 }
+
+.back-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 0; /* Remove padding */
+    font-size: 24px; /* Adjust font size for visibility */
+    color: white; /* Text color */
+    margin-left: 15px;
+}
+
+@media (min-width: 769px) {
+    .back-button {
+        display: none; /* Hide button on screens wider than 768px */
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container{
+        font-size: 18px;
+    }
+	
+    .sidebar {
+        font-size: 18px;
+    }
+
+    .main-content {
+        font-size: 18px;
+    }
+
+    .notes-header {
+        font-size: 18px;
+    }
+
+    .profile-photo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .group-active {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+	}
+
+    .no-active-group {
+        display: none;
+    }
+
+    .notes-header {
+        font-size: 18px;
+    }
+	.back-button {
+		margin-right: 10px; /* Adjust margin for the back button */
+	}
+}
